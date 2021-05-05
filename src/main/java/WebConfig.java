@@ -21,6 +21,7 @@ import org.thymeleaf.spring5.SpringTemplateEngine;
 import org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver;
 import org.thymeleaf.spring5.view.ThymeleafViewResolver;
 import org.thymeleaf.templatemode.TemplateMode;
+import service.impl.UserServiceImpl;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -108,5 +109,9 @@ public class WebConfig extends WebMvcConfigurerAdapter implements ApplicationCon
     @Bean
     Logger logger(){
         return new Logger();
+    }
+    @Bean
+    UserServiceImpl userService(){
+        return new UserServiceImpl();
     }
 }

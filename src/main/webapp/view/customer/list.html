@@ -1,11 +1,15 @@
 <!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>List Customer</title>
 </head>
 <body>
+
 <a href="/create-customer">Create Customer</a>
+<a href="/login">LOGIN</a>
 <h1>List Customer</h1>
+<h1 th:utext="${'view size = '+counter.count}"></h1>
 </body>
 </html>
